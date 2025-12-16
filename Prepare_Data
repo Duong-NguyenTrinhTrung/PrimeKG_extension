@@ -1,0 +1,125 @@
+# bgee data note
+20251124-Homo_sapiens_expr_advanced.tsv and 20251124-Homo_sapiens_expr_advanced.tsv have the same number of rows: 9261154 so no update
+
+# ctd data note
+  #current:
+  cat CTD_exposure_events.csv | wc -l --> 218035 rows
+  cat exposure_data.csv| wc -l  --> 218008 rows
+  
+  #update
+  cat 20251124-CTD_exposure_events.csv | wc -l --> 234025 rows
+  cat CTD_exposure_events.csv | wc -l  --> 218035 rows
+
+# disgenet
+  # combine author's data and disgenet's data
+  Author: curated_gene_disease_associations.tsv --> 84039 rows, 16 columns
+  Disgenet: curated_gene_disease_associations.tsv --> 130822 rows, 8 columns
+  Combined data: curated_gene_disease_associations.tsv --> 130822 rows, 8 columns
+
+  # what are added in the combined data
+  807 new genes
+  # Will update about the number of new disease
+  # Will update about the number of new associations and score statistics
+
+#drugbank
+  #current
+  cat drug_protein.csv | wc -l --> 32187 rows
+  cat drug_drug.csv   | wc -l  --> 2839611 rows
+  #update with 2025-01-02 release
+  cat drug_protein.csv | wc -l --> 32187 rows
+  cat drug_drug.csv   | wc -l  --> 2855849 rows
+
+#drug central
+
+
+#go
+  #current:
+  cat go-basic.obo| wc -l  --> 547840
+  cat go_terms_info.csv| wc -l --> 40666
+  cat go_terms_relations.csv| wc -l  --> 63802
+  #update
+  cat 20251124-go-basic.obo| wc -l --> 550489
+  cat 20251124-go_terms_info.csv| wc -l --> 39355
+  cat 20251124-go_terms_relations.csv| wc -l --> 60097
+
+#hpo
+  #current
+  cat hp.obo| wc -l  --> 195777
+  cat phenotype.hpoa| wc -l --> 272860
+
+  #update
+  cat 20251124-hp.obo| wc -l --> 198247
+  cat 20251124-phenotype.hpoa| wc -l  --> 272860
+
+#mondo
+  #current
+  cat mondo.obo| wc -l  --> 837156
+
+  #update
+  cat 20251124-mondo.obo| wc -l --> 871050
+
+#ncbigene
+  #current
+  cat gene2go| wc -l  --> 106006025 
+  cat protein_go_associations.csv | wc -l  --> 306676
+  #update
+  cat 20251124-gene2go | wc -l --> 112366082
+  cat 20251124-protein_go_associations.csv| wc -l --> 350305
+
+#reactome
+  #current
+  cat NCBI2Reactome.txt| wc -l --> 215096
+  #update
+  cat 20251124-NCBI2Reactome.txt| wc -l --> 112525
+
+#sider
+  #current
+  cat drug_atc.tsv| wc -l  --> 1560
+  cat meddra_all_se.tsv| wc -l --> 309849
+  #update
+  cat 20251124-drug_atc.tsv| wc -l --> 1560
+  cat 20251124-meddra_all_se.tsv| wc -l --> 309849
+
+#uberon
+  #current
+  cat ext.obo| wc -l --> 433434
+
+  #update
+  cat 20251124-ext.obo| wc -l --> 430024
+
+#umls
+  #current
+  cat umls.csv| wc -l  --> 20756119
+
+  #update
+  cat umls_2025AB.csv| wc -l  --> 21309555
+
+#vocal
+  #current
+  cat gene_names.csv | wc -l --> 43998
+  cat drugbank_vocabulary.csv | wc -l --> 17431
+  cat umls_mondo.csv | wc -l --> 31333
+  cat drugbank_atc_codes.csv | wc -l --> 5516
+  cat gene_map.csv | wc -l --> 43998
+
+  #update
+  cat 20251124-gene_names.csv | wc -l --> 44636
+  cat 20251124-drugbank_vocabulary.csv  | wc -l --> 17431
+  cat 20251124-umls_mondo.csv | wc -l --> 31686
+  cat 20251124-drugbank_atc_codes.csv | wc -l --> 5657
+  cat 20251124-gene_map.csv | wc -l --> 44636
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
