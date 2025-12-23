@@ -12,24 +12,30 @@
 
 # disgenet
   # combine author's data and disgenet's data
-  Author: curated_gene_disease_associations.tsv --> 84039 rows, 16 columns
-  Disgenet: curated_gene_disease_associations.tsv --> 130822 rows, 8 columns
-  Combined data: curated_gene_disease_associations.tsv --> 130822 rows, 8 columns
+  Author: curated_gene_disease_associations.tsv --> 84038 associations, 16 columns, 
+  Disgenet: curated_gene_disease_associations.tsv --> 130821 associations, 8 columns, 13074 unique diseases, 8947 unique genes
+  Combined data: curated_gene_disease_associations.tsv --> 214859 associations rows, 8 columns, 17159 unique diseases, 10826 unique genes
 
-  # what are added in the combined data
-  807 new genes
-  # Will update about the number of new disease
-  # Will update about the number of new associations and score statistics
+#ppi
+  # existing
+  321075 interactions
+
+  # update
+  444985 interactions (we added new pairs of protein-protein interactions that have combined scores > 900 from STRING databases)
+
 
 #drugbank
   #current
-  cat drug_protein.csv | wc -l --> 32187 rows
-  cat drug_drug.csv   | wc -l  --> 2839611 rows
+  cat drug_protein.csv | wc -l --> 32098 relations spanning 'carrier' 'enzyme' 'target' 'transporter' categories
+  cat drug_drug.csv   | wc -l  --> 2839610 drug_drug interactions
   #update with 2025-01-02 release
-  cat drug_protein.csv | wc -l --> 32187 rows
-  cat drug_drug.csv   | wc -l  --> 2855849 rows
+  cat drug_protein.csv | wc -l --> 32096 relations spanning 'carrier' 'enzyme' 'target' 'transporter' categories
+  cat drug_drug.csv   | wc -l  --> 2855848 drug_drug interactions
+
 
 #drug central
+  #current: indication 9259, contraindication 26824, off-label 1987
+  #updated: indication 9545, contraindication 26879, off-label 1987
 
 
 #go
