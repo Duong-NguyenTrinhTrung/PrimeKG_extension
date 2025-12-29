@@ -3,18 +3,22 @@
 
 # ctd data note
   #current:
-  cat CTD_exposure_events.csv | wc -l --> 218035 rows
-  cat exposure_data.csv| wc -l  --> 218008 rows
+  cat CTD_exposure_events.csv | wc -l --> 218034 events
+  cat exposure_data.csv| wc -l  -->  218007 exposure data rows
   
   #update
-  cat 20251124-CTD_exposure_events.csv | wc -l --> 234025 rows
-  cat CTD_exposure_events.csv | wc -l  --> 218035 rows
+  cat 20251124-CTD_exposure_events.csv | wc -l --> 234024 event
+  cat 20251124-exposure_data.csv | wc -l  --> 233997 exposure data rows
 
 # disgenet
-  # combine author's data and disgenet's data
-  Author: curated_gene_disease_associations.tsv --> 84038 associations, 16 columns, 
-  Disgenet: curated_gene_disease_associations.tsv --> 130821 associations, 8 columns, 13074 unique diseases, 8947 unique genes
-  Combined data: curated_gene_disease_associations.tsv --> 214859 associations rows, 8 columns, 17159 unique diseases, 10826 unique genes
+  #existing
+  existing number of associations: 84038
+  existing number of unique diseases:  11181
+  existing number of unique genes:  9703
+  #updated
+  updated number of associationst: 88789
+  updated number of unique diseases:  11206
+  updated number of unique genes:  9738
 
 #ppi
   # existing
@@ -29,7 +33,7 @@
   cat drug_protein.csv | wc -l --> 32098 relations spanning 'carrier' 'enzyme' 'target' 'transporter' categories
   cat drug_drug.csv   | wc -l  --> 2839610 drug_drug interactions
   #update with 2025-01-02 release
-  cat drug_protein.csv | wc -l --> 32096 relations spanning 'carrier' 'enzyme' 'target' 'transporter' categories
+  cat drug_protein.csv | wc -l --> 32096 relations spanning 'carrier' 'enzyme' 'target' 'transporter' categories. Compared to current version, 2 relations with gene "7923" were removed
   cat drug_drug.csv   | wc -l  --> 2855848 drug_drug interactions
 
 
@@ -41,28 +45,45 @@
 #go
   #current:
   cat go-basic.obo| wc -l  --> 547840
-  cat go_terms_info.csv| wc -l --> 40666
-  cat go_terms_relations.csv| wc -l  --> 63802
+  go_terms_info.csv --> unique terms --> 40666
+  go_terms_relations.csv--> 63801
+  protein_go_associations.csv --> 306675
+
   #update
   cat 20251124-go-basic.obo| wc -l --> 550489
-  cat 20251124-go_terms_info.csv| wc -l --> 39355
-  cat 20251124-go_terms_relations.csv| wc -l --> 60097
+  20251124-go_terms_info.csv --> unique terms --> 39355
+  20251124-go_terms_relations.csv --> 60096
+  20251124-protein_go_associations.csv --> 350304
 
 #hpo
   #current
+  hp_terms.csv --> 19533 records
+  hp_references.csv --> 18165
+  hp_parents.csv --> 23434
+  disease_phenotype_pos.csv --> 271526 (same)
+  disease_phenotype_neg.csv --> 720 (same)
   cat hp.obo| wc -l  --> 195777
   cat phenotype.hpoa| wc -l --> 272860
 
   #update
+  hp_terms.csv --> 19763 records
+  hp_references.csv --> 18139
+  hp_parents.csv --> 23612
+  disease_phenotype_pos.csv --> 271526 (same)
+  disease_phenotype_neg.csv --> 720 (same)
   cat 20251124-hp.obo| wc -l --> 198247
   cat 20251124-phenotype.hpoa| wc -l  --> 272860
 
 #mondo
   #current
-  cat mondo.obo| wc -l  --> 837156
+    #mondo terms: 
+    mondo_terms.csv --> unique terms: 51160
+    cat mondo.obo| wc -l  --> 837156
 
   #update
-  cat 20251124-mondo.obo| wc -l --> 871050
+    #mondo terms: 
+    mondo_terms.csv --> unique terms: 51944
+    cat 20251124-mondo.obo| wc -l --> 871050
 
 #ncbigene
   #current
@@ -75,8 +96,17 @@
 #reactome
   #current
   cat NCBI2Reactome.txt| wc -l --> 215096
+  reactome_terms - number of unique ids: 2751
+  reactome_relations - number of relations: 2769
+  reactome_ncbi - number of records: 39838
+
+
+
   #update
   cat 20251124-NCBI2Reactome.txt| wc -l --> 112525
+  reactome_terms - number of unique ids: 2825
+  reactome_relations - number of relations: 2841
+  reactome_ncbi - number of records: 14745 --> should check again
 
 #sider
   #current
@@ -89,9 +119,13 @@
 #uberon
   #current
   cat ext.obo| wc -l --> 433434
+  uberon term - number of unique terms: 14572
+  uberon_rels - number of relations: 10305
 
   #update
   cat 20251124-ext.obo| wc -l --> 430024
+  uberon term - number of unique terms: 14667
+  uberon_rels - number of relations: 10343
 
 #umls
   #current
@@ -102,17 +136,17 @@
 
 #vocal
   #current
-  cat gene_names.csv | wc -l --> 43998
-  cat drugbank_vocabulary.csv | wc -l --> 17431
+  cat gene_names.csv | wc -l --> 43698 unique gene and NCBI pairs
+  cat drugbank_vocabulary.csv | wc -l --> 17430 unique Drugbank ID
   cat umls_mondo.csv | wc -l --> 31333
-  cat drugbank_atc_codes.csv | wc -l --> 5516
+  cat drugbank_atc_codes.csv | wc -l --> 5515 pairs of drugbank IDs and atc codes
   cat gene_map.csv | wc -l --> 43998
 
   #update
-  cat 20251124-gene_names.csv | wc -l --> 44636
-  cat 20251124-drugbank_vocabulary.csv  | wc -l --> 17431
+  cat 20251124-gene_names.csv | wc -l --> 43696 unique gene and NCBI pairs
+  cat 20251124-drugbank_vocabulary.csv  | wc -l --> 17430 unique Drugbank ID
   cat 20251124-umls_mondo.csv | wc -l --> 31686
-  cat 20251124-drugbank_atc_codes.csv | wc -l --> 5657
+  cat 20251124-drugbank_atc_codes.csv | wc -l --> 5656 pairs of drugbank IDs and atc codes
   cat 20251124-gene_map.csv | wc -l --> 44636
   
   
